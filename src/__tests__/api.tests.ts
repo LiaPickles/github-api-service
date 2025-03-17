@@ -56,3 +56,73 @@ describe("GET /repositories", () => {
         })
     })
 })
+
+
+describe("POST /repositorydetails", () => {
+    test("POST 200, returns object with repository details when provided with valid ID and search term object", () => {
+        const searchTerm = {searchTerm: "world"}
+        return request(app)
+        .post("/repositorydetails?id=420875841")
+        .send(searchTerm)
+        .expect(200)
+        .then(({ body }) => {
+            expect(body.formattedRepo).toMatchObject({
+                id: 420875841,
+                name: 'world',
+                description: 'A Laravel package which provides a list of the countries, states, cities, currencies, timezones and languages.',
+                owner: 'nnjeim',
+                forks_count: expect.any(Number),
+                open_issues_count: expect.any(Number),
+                watchers_count: expect.any(Number),
+                language: 'PHP',
+                html_url: 'https://github.com/nnjeim/world'
+            })
+        })
+    })
+
+    test("POST 200, returns an empty array when no repos found with search term", () => {
+        const searchTerm = {searchTerm: "randomwordasthesearchterm"}
+        return request(app)
+        .post("/repositorydetails?id=420875841")
+        .send(searchTerm)
+        .expect(200)
+        .then(({ body }) => {
+            expect(body.formattedRepo).toEqual([])
+        })
+    })
+
+    test("POST 404, returns relevant error message when ID not found in repos of a certain search term", () => {
+        const searchTerm = {searchTerm: "world"}
+        return request(app)
+        .post("/repositorydetails?id=4")
+        .send(searchTerm)
+        .expect(404)
+        .then(({ body }) => {
+            expect(body.message).toBe("Id not found")
+        })
+    })
+    
+    test("POST 400, returns relevant error message when ID not given", () => {
+        const searchTerm = {searchTerm: "world"}
+        return request(app)
+        .post("/repositorydetails")
+        .send(searchTerm)
+        .expect(400)
+        .then(({ body }) => {
+            expect(body.message).toBe("Query parameter 'id' is required")
+        })
+
+    })
+
+    test("POST 400, returns relevant error message when search term not given", () => {
+        const searchTerm = {searchTerm: ""}
+        return request(app)
+        .post("/repositorydetails?id=420875841")
+        .send(searchTerm)
+        .expect(400)
+        .then(({ body }) => {
+            expect(body.message).toBe("Missing search term field")
+        })
+
+    })
+})

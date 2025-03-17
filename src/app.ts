@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
-import { getRepositories } from "./controller";
+import { getRepositories, getRepositoryDetails } from "./controller";
 
 const app = express();
 app.use(cors());
@@ -10,6 +10,8 @@ app.use(express.json());
   app.get("/repositories", (req: Request, res: Response, next: NextFunction) => {
     getRepositories(req, res, next);
 });
+
+app.post("/repositorydetails", (req: Request, res: Response, next: NextFunction) => { getRepositoryDetails(req, res, next)})
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     if (err.message) {

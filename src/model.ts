@@ -18,6 +18,42 @@ const githubApi = axios.create({
         };
       });
   };
+
+  const searchRepositoryDetails = (searchTerm: string, repoId: string) => {
+    return githubApi
+    .get("/search/repositories", { params: { q: searchTerm }})
+    .then((res) => {
+
+        if (!res.data.items || res.data.items.length === 0) {
+            return [];
+        }
+        
+        const repoDetails = res.data.items.find((repo: any) => repo.id.toString() === repoId);
+
+        if (repoDetails) {
+            const formattedRepo = {
+                id: repoDetails.id,
+                name: repoDetails.name,
+                description: repoDetails.description,
+                owner: repoDetails.owner.login,
+                forks_count: repoDetails.forks_count,
+                open_issues_count: repoDetails.open_issues_count,
+                watchers_count: repoDetails.watchers_count,
+                language: repoDetails.language,
+                html_url: repoDetails.html_url,
+            };
+            return formattedRepo
+        }
+        else{
+            return  Promise.reject({
+                status: 404,
+                message: "Id not found",
+            })
+        }
+    
+    })
+}
+
   
   
-  export { searchRepositories };
+  export { searchRepositories, searchRepositoryDetails };
