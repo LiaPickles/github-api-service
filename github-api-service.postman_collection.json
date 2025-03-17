@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "4412d9d7-f17f-4aa5-bbe5-2637313bfd2e",
+		"name": "github-api-service",
+		"description": "api service to retrieve repositories by search term and additionally, more specific respoitory details.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43183228"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/repositories?name=world",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repositories"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "world"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/repositories?name=world",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repositories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "world"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3172"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c64-yq4ka7ymSeqEcCVwHSK2BH7uh34\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 22:43:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"repos\": {\n        \"total_count\": 2276221,\n        \"repositories\": [\n            {\n                \"id\": 46209384,\n                \"name\": \"World\",\n                \"owner\": \"mmorise\",\n                \"url\": \"https://github.com/mmorise/World\"\n            },\n            {\n                \"id\": 420875841,\n                \"name\": \"world\",\n                \"owner\": \"nnjeim\",\n                \"url\": \"https://github.com/nnjeim/world\"\n            },\n            {\n                \"id\": 2914181,\n                \"name\": \"world\",\n                \"owner\": \"openproject\",\n                \"url\": \"https://github.com/openproject/world\"\n            },\n            {\n                \"id\": 258758474,\n                \"name\": \"World\",\n                \"owner\": \"lovehacker404\",\n                \"url\": \"https://github.com/lovehacker404/World\"\n            },\n            {\n                \"id\": 1045381,\n                \"name\": \"phonegap-start\",\n                \"owner\": \"phonegap\",\n                \"url\": \"https://github.com/phonegap/phonegap-start\"\n            },\n            {\n                \"id\": 11180687,\n                \"name\": \"hugo\",\n                \"owner\": \"gohugoio\",\n                \"url\": \"https://github.com/gohugoio/hugo\"\n            },\n            {\n                \"id\": 162865647,\n                \"name\": \"hello-world\",\n                \"owner\": \"yankils\",\n                \"url\": \"https://github.com/yankils/hello-world\"\n            },\n            {\n                \"id\": 944926,\n                \"name\": \"WorldEdit\",\n                \"owner\": \"EngineHub\",\n                \"url\": \"https://github.com/EngineHub/WorldEdit\"\n            },\n            {\n                \"id\": 234739976,\n                \"name\": \"medusa\",\n                \"owner\": \"medusajs\",\n                \"url\": \"https://github.com/medusajs/medusa\"\n            },\n            {\n                \"id\": 439861,\n                \"name\": \"moodle\",\n                \"owner\": \"moodle\",\n                \"url\": \"https://github.com/moodle/moodle\"\n            },\n            {\n                \"id\": 34096,\n                \"name\": \"hello-world\",\n                \"owner\": \"leachim6\",\n                \"url\": \"https://github.com/leachim6/hello-world\"\n            },\n            {\n                \"id\": 1438007,\n                \"name\": \"Terasology\",\n                \"owner\": \"MovingBlocks\",\n                \"url\": \"https://github.com/MovingBlocks/Terasology\"\n            },\n            {\n                \"id\": 68956484,\n                \"name\": \"angular-realworld-example-app\",\n                \"owner\": \"gothinkster\",\n                \"url\": \"https://github.com/gothinkster/angular-realworld-example-app\"\n            },\n            {\n                \"id\": 1296269,\n                \"name\": \"Hello-World\",\n                \"owner\": \"octocat\",\n                \"url\": \"https://github.com/octocat/Hello-World\"\n            },\n            {\n                \"id\": 516735733,\n                \"name\": \"DEVOPS-WORLD\",\n                \"owner\": \"ann-felix\",\n                \"url\": \"https://github.com/ann-felix/DEVOPS-WORLD\"\n            },\n            {\n                \"id\": 157166750,\n                \"name\": \"lens\",\n                \"owner\": \"lensapp\",\n                \"url\": \"https://github.com/lensapp/lens\"\n            },\n            {\n                \"id\": 151430926,\n                \"name\": \"Hello-world\",\n                \"owner\": \"Aniket965\",\n                \"url\": \"https://github.com/Aniket965/Hello-world\"\n            },\n            {\n                \"id\": 27494663,\n                \"name\": \"machine\",\n                \"owner\": \"docker\",\n                \"url\": \"https://github.com/docker/machine\"\n            },\n            {\n                \"id\": 13044600,\n                \"name\": \"SuiteCRM\",\n                \"owner\": \"salesagility\",\n                \"url\": \"https://github.com/salesagility/SuiteCRM\"\n            },\n            {\n                \"id\": 162608338,\n                \"name\": \"ds-cheatsheets\",\n                \"owner\": \"FavioVazquez\",\n                \"url\": \"https://github.com/FavioVazquez/ds-cheatsheets\"\n            },\n            {\n                \"id\": 253723503,\n                \"name\": \"example-helloworld\",\n                \"owner\": \"solana-labs\",\n                \"url\": \"https://github.com/solana-labs/example-helloworld\"\n            },\n            {\n                \"id\": 1090553,\n                \"name\": \"WorldGuard\",\n                \"owner\": \"EngineHub\",\n                \"url\": \"https://github.com/EngineHub/WorldGuard\"\n            },\n            {\n                \"id\": 47409672,\n                \"name\": \"hashcat\",\n                \"owner\": \"hashcat\",\n                \"url\": \"https://github.com/hashcat/hashcat\"\n            },\n            {\n                \"id\": 12958155,\n                \"name\": \"world\",\n                \"owner\": \"aemkei\",\n                \"url\": \"https://github.com/aemkei/world\"\n            },\n            {\n                \"id\": 349321229,\n                \"name\": \"GFPGAN\",\n                \"owner\": \"TencentARC\",\n                \"url\": \"https://github.com/TencentARC/GFPGAN\"\n            },\n            {\n                \"id\": 83844720,\n                \"name\": \"face_recognition\",\n                \"owner\": \"ageitgey\",\n                \"url\": \"https://github.com/ageitgey/face_recognition\"\n            },\n            {\n                \"id\": 56101366,\n                \"name\": \"react-redux-realworld-example-app\",\n                \"owner\": \"gothinkster\",\n                \"url\": \"https://github.com/gothinkster/react-redux-realworld-example-app\"\n            },\n            {\n                \"id\": 23284211,\n                \"name\": \"holidays\",\n                \"owner\": \"vacanza\",\n                \"url\": \"https://github.com/vacanza/holidays\"\n            },\n            {\n                \"id\": 157616880,\n                \"name\": \"iptv\",\n                \"owner\": \"iptv-org\",\n                \"url\": \"https://github.com/iptv-org/iptv\"\n            },\n            {\n                \"id\": 151225520,\n                \"name\": \"Hello-World\",\n                \"owner\": \"blackbird71SR\",\n                \"url\": \"https://github.com/blackbird71SR/Hello-World\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/repositorydetails?id=420875841",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"searchTerm\": \"world\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/repositorydetails?id=420875841",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repositorydetails"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "420875841"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/repositorydetails?id=420875841",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"searchTerm\": \"world\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/repositorydetails?id=420875841",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repositorydetails"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "420875841"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "316"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13c-px62fvwsElbisnFZBtcxdQYGn54\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 22:45:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"formattedRepo\": {\n        \"id\": 420875841,\n        \"name\": \"world\",\n        \"description\": \"A Laravel package which provides a list of the countries, states, cities, currencies, timezones and languages.\",\n        \"owner\": \"nnjeim\",\n        \"forks_count\": 118,\n        \"open_issues_count\": 0,\n        \"watchers_count\": 865,\n        \"language\": \"PHP\",\n        \"html_url\": \"https://github.com/nnjeim/world\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
