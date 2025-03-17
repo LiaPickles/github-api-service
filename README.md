@@ -36,6 +36,7 @@ By default, the API will run on http://localhost:3000.
 
 # API Endpoints
 1️⃣ Search for GitHub Repositories
+This endpoit allows you to search repositories using a search term. Repositories will match if search term is found in the name, the description, or the README.
 Endpoint:
 GET /repositories?name={searchQuery}
 
