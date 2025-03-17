@@ -18,6 +18,7 @@ describe("GET /repositories", () => {
                 expect(Array.isArray(body.repos.repositories)).toBe(true);
                 body.repos.repositories.forEach((repository: Repository) => {
                     expect(repository).toMatchObject({
+                        id: expect.any(Number),
                         name: expect.any(String),
                         owner: expect.any(String),
                         url: expect.any(String)
@@ -33,7 +34,7 @@ describe("GET /repositories", () => {
         .expect(200)
         .then(({ body }) => {
             expect(body.repos.total_count).toBe(0)
-            expect(body.repos.repositories.length).toBe(0)
+            expect(body.repos.repositories).toEqual([])
         })
     })
     

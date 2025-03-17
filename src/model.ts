@@ -11,6 +11,7 @@ const githubApi = axios.create({
         return {
           total_count: res.data.total_count,
           repositories: res.data.items.map((repo: any) => ({
+            id: repo.id,
             name: repo.name,
             owner: repo.owner.login,
             url: repo.html_url,
@@ -27,7 +28,7 @@ const githubApi = axios.create({
         if (!res.data.items || res.data.items.length === 0) {
             return [];
         }
-        
+
         const repoDetails = res.data.items.find((repo: any) => repo.id.toString() === repoId);
 
         if (repoDetails) {
